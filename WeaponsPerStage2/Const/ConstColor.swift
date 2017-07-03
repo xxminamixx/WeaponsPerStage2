@@ -18,6 +18,7 @@ class ConstColor {
     
     // MARK: 紫系
     static let purple = UIColor(red: 0.8667, green: 0.2588, blue: 0.5843, alpha: 1.0) /* #dd4295 */
+    static let iconPurple = UIColor(red: 0.7647, green: 0, blue: 0.9176, alpha: 1.0) /* #c300ea */
     
     // MARK: グレー系
     static let gray_e8e8e8 = UIColor(red: 0.9098, green: 0.9098, blue: 0.9098, alpha: 1.0) /* #e8e8e8 */

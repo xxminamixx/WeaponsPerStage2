@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         // タブバーの色を設定
         tabBar.barTintColor = UIColor.white
         // 選択時の色を設定
-        UITabBar.appearance().tintColor = ConstColor.iconGreen
+        UITabBar.appearance().tintColor = ConstColor.iconPurple
         
         // 非選択時の色を設定
         // iOS10以上の設定

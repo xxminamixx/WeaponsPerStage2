@@ -11,7 +11,7 @@ import UIKit
 class NavigationController: UINavigationController {
 
     override func viewDidLoad() {
-        navigationBar.barTintColor = ConstColor.iconGreen
+        navigationBar.barTintColor = ConstColor.iconPurple
         navigationBar.tintColor = UIColor.white
         
         // 戻るボタンの文言を設定

@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
         loseCount.textColor = ConstColor.skyBlue
         
         // 仕切りViewの色設定
-        separatorView.backgroundColor = ConstColor.iconGreen
+        separatorView.backgroundColor = ConstColor.iconPurple
         
         // キャプチャボタンをNavigationBarの右に追加
         let rightCaptureButton = UIButton()
