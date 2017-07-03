@@ -39,7 +39,7 @@ extension SortViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:  SortTableViewCell.nibName, for: indexPath) as! SortTableViewCell
         
-        cell.weaponsType.text = (weapon: DataSource.weaponType[indexPath.row]) as? String
+        cell.weaponsType.text =  DataSource.weaponType[indexPath.row]
         
         // 全武器表示セルのみ色を変更
         if indexPath.row == 0 {

@@ -445,14 +445,8 @@
 		9DD822C41F09FF0900C4C517 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DD822E61F0A00C400C4C517 /* AlertControllerManager.swift */,
-				9DD822E71F0A00C400C4C517 /* DeviceSizeManager.swift */,
-				9DD822E81F0A00C400C4C517 /* IndexManager.swift */,
-				9DD822E91F0A00C400C4C517 /* JsonManager.swift */,
-				9DD822EA1F0A00C400C4C517 /* WeaponsPerStageStoreManager.swift */,
-				9DD822EB1F0A00C400C4C517 /* WeaponsSelectHandlingManager.swift */,
-				9DD822E21F0A00BB00C4C517 /* FavoriteWeaponsEntity.swift */,
-				9DD822E31F0A00BB00C4C517 /* WeaponsPerStageEntity.swift */,
+				9DD823F41F0A097200C4C517 /* Manager */,
+				9DD823F31F0A096600C4C517 /* Entity */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -619,6 +613,28 @@
 				9DD822F91F0A010000C4C517 /* UIView+Capture.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		9DD823F31F0A096600C4C517 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9DD822E21F0A00BB00C4C517 /* FavoriteWeaponsEntity.swift */,
+				9DD822E31F0A00BB00C4C517 /* WeaponsPerStageEntity.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		9DD823F41F0A097200C4C517 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9DD822E61F0A00C400C4C517 /* AlertControllerManager.swift */,
+				9DD822E71F0A00C400C4C517 /* DeviceSizeManager.swift */,
+				9DD822E81F0A00C400C4C517 /* IndexManager.swift */,
+				9DD822E91F0A00C400C4C517 /* JsonManager.swift */,
+				9DD822EA1F0A00C400C4C517 /* WeaponsPerStageStoreManager.swift */,
+				9DD822EB1F0A00C400C4C517 /* WeaponsSelectHandlingManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		E417803A89E513599612E866 /* Pods */ = {
