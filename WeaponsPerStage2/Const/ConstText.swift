@@ -22,5 +22,5 @@ class ConstText {
     static let allDeleteMessage = "本当に初期化しますか？"
     
     /* Twitter関連 */
-    static let twitterInitialText = "対抗戦の結果です。\n#イカウェポナー\n#対抗戦\n#スプラトゥーン"
+    static let twitterInitialText = "#イカウェポナー2\n#対抗戦\n#スプラトゥーン"
 }
