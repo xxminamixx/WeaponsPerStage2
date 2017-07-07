@@ -136,6 +136,7 @@ class HomeViewController: UIViewController {
                     }
                 })
             } else {
+                // TODO: ライブラリにオブジェクトがない場合失敗する模様
                 alertController(title: nil, message: "キャプチャに失敗しました。", completion: {})
             }
         }
