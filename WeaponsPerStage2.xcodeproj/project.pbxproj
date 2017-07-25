@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D5313E31F2738D200B851C4 /* hatena.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D5313E21F2738D200B851C4 /* hatena.png */; };
+		9D5313E51F274CDF00B851C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D5313E41F274CDF00B851C4 /* GoogleService-Info.plist */; };
 		9DD822A81F09FCE900C4C517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD822A61F09FCE900C4C517 /* Main.storyboard */; };
 		9DD822AA1F09FCE900C4C517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD822A91F09FCE900C4C517 /* Assets.xcassets */; };
 		9DD822AD1F09FCE900C4C517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD822AB1F09FCE900C4C517 /* LaunchScreen.storyboard */; };
@@ -180,6 +181,7 @@
 		8D749F911AE88E262E066C73 /* Pods_WeaponsPerStage2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeaponsPerStage2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A0AFCE79C483216F4B55D0 /* Pods-WeaponsPerStage2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeaponsPerStage2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeaponsPerStage2Tests/Pods-WeaponsPerStage2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9D5313E21F2738D200B851C4 /* hatena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hatena.png; path = Resources/hatena.png; sourceTree = "<group>"; };
+		9D5313E41F274CDF00B851C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DD8229F1F09FCE900C4C517 /* WeaponsPerStage2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeaponsPerStage2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD822A71F09FCE900C4C517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DD822A91F09FCE900C4C517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		9DD822961F09FCE900C4C517 = {
 			isa = PBXGroup;
 			children = (
+				9D5313E41F274CDF00B851C4 /* GoogleService-Info.plist */,
 				9DD822C61F0A008100C4C517 /* AppDelegate.swift */,
 				9DD822A11F09FCE900C4C517 /* WeaponsPerStage2 */,
 				9DD822B61F09FCE900C4C517 /* WeaponsPerStage2Tests */,
@@ -830,6 +833,7 @@
 				9DD823D21F0A012200C4C517 /* r-blaster-elite.png in Resources */,
 				9DD8239B1F0A012200C4C517 /* dynamo-roller.png in Resources */,
 				9DD8238F1F0A012200C4C517 /* Capture.png in Resources */,
+				9D5313E51F274CDF00B851C4 /* GoogleService-Info.plist in Resources */,
 				9DD823911F0A012200C4C517 /* Capture@3x.png in Resources */,
 				9DD823E91F0A012200C4C517 /* sprat-spinner.png in Resources */,
 				9DD823931F0A012200C4C517 /* carbon-roller.png in Resources */,

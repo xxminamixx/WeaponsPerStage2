@@ -6,6 +6,7 @@ target 'WeaponsPerStage2’ do
 	pod 'RealmSwift’
 	pod 'SlideMenuControllerSwift’, ‘3.0.0’
 	pod 'GoogleMobileAds'
+	pod 'Google/SignIn'
 
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
