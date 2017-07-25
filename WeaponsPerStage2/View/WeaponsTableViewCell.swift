@@ -37,8 +37,12 @@ class WeaponsTableViewCell: UITableViewCell {
     func setup(weapon: String, indexPath: IndexPath) {
         self.weapon.text = weapon
         self.indexPath = indexPath
+        // 画像セット
         if let weaponIcon = DataSource.weaponsIconRelation[weapon] {
             self.weaponIcon.image = UIImage(named: weaponIcon)
+        } else {
+            // 画像がない時
+            self.weaponIcon.image = UIImage(named: "hatena.png")
         }
         
         storedHandler(weapon: weapon,

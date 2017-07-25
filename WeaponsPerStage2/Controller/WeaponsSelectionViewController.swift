@@ -61,6 +61,8 @@ extension WeaponsSelectionViewController: WaponsPerStageTableViewCellDelegate {
             if let weaponIcon = DataSource.weaponsIconRelation[JsonManager.weaponsName()[indexPath.row]] {
                 // データソースから武器アイコンをセットする
                 weaponStage.weaponIcon = weaponIcon
+            } else {
+                weaponStage.weaponIcon = "hatena.png"
             }
             
         })

@@ -10,6 +10,7 @@ import UIKit
 import Social
 import Photos
 import SlideMenuControllerSwift
+import GoogleMobileAds
 
 class HomeViewController: UIViewController {
 
@@ -29,6 +30,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var winCount: UILabel!
     /// 敗北数をカウント
     @IBOutlet weak var loseCount: UILabel!
+    /// バナー表示ビュー
+    @IBOutlet weak var bannerView: UIView!
     
     override func viewDidLoad() {
         // NavigationBarのタイトル
@@ -56,6 +59,20 @@ class HomeViewController: UIViewController {
         // 仕切りViewの色設定
         separatorView.backgroundColor = ConstColor.iconPurple
         
+        // 広告の設定
+        let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        // AdMobで発行された広告ユニットIDを設定
+        banner.adUnitID = "ここに広告ID埋め込む"
+        banner.delegate = self
+        banner.rootViewController = self
+        let gadRequest:GADRequest = GADRequest()
+        
+        // テスト用の広告を表示する時のみ使用（申請時に削除）
+        gadRequest.testDevices = [kGADSimulatorID]
+        
+        banner.load(gadRequest)
+        self.bannerView.addSubview(banner)
+
         // キャプチャボタンをNavigationBarの右に追加
         let rightCaptureButton = UIButton()
         rightCaptureButton.setImage(UIImage(named: "Capture.png"), for: .normal)
@@ -229,5 +246,9 @@ extension HomeViewController: UITableViewDelegate {
         // TODO: カスタムセルの高さを固定にしているため定数にしているが、変更に対応できるように変数にしたい
         return 100
     }
+    
+}
+
+extension HomeViewController: GADBannerViewDelegate {
     
 }

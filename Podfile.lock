@@ -1,4 +1,5 @@
 PODS:
+  - GoogleMobileAds (7.8.0)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
@@ -7,14 +8,16 @@ PODS:
   - SlideMenuControllerSwift (3.0.0)
 
 DEPENDENCIES:
+  - GoogleMobileAds
   - RealmSwift
   - SlideMenuControllerSwift (= 3.0.0)
 
 SPEC CHECKSUMS:
+  GoogleMobileAds: c79931d6eef16b1e4c35d331cf23c47e0dd490d2
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
 
-PODFILE CHECKSUM: 70e7c16d2780a1e8f0f2e62d4641cb2b48d675c5
+PODFILE CHECKSUM: dba571d161066c12659b75c4874c4f14a1103e46
 
 COCOAPODS: 1.1.1

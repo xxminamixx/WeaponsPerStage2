@@ -60,7 +60,7 @@ class WaponsPerStageTableViewCell: UITableViewCell {
         self.winloseStatus = entity.winlose ?? "both"
         self.indexPath = indexPath
         self.completion = completion
-        self.weaponImage.image = UIImage(named: entity.weaponIcon ?? "wakaba-shooter.png ")
+        self.weaponImage.image = UIImage(named: entity.weaponIcon ?? "hatena.png")
         buttonColorSwitch()
     }
     
