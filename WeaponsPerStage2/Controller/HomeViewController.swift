@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
         // 広告の設定
         let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         // AdMobで発行された広告ユニットIDを設定
-        banner.adUnitID = "ここに広告ID埋め込む"
+        banner.adUnitID = "ca-app-pub-9801569699151969/3170549283"
         banner.delegate = self
         banner.rootViewController = self
         let gadRequest:GADRequest = GADRequest()
