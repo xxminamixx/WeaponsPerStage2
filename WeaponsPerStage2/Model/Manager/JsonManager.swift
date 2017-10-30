@@ -33,8 +33,20 @@ class JsonManager {
         }
     }
     
-    static func weaponsList() -> Array<Dictionary<String, String>>? {
-        let json = try! JSONSerialization.jsonObject(with: getResourceJson(name: ConstText.weapons)!,
+//    static func weaponsList() -> Array<Dictionary<String, String>>? {
+//        let json = try! JSONSerialization.jsonObject(with: getResourceJson(name: ConstText.weapons)!,
+//                                                     options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+//        
+//        guard let weapons = json.value(forKey: ConstText.weapons) as! Array<Dictionary<String, String>>? else {
+//            return nil
+//        }
+//        
+//        // 武器配列を返す
+//        return weapons
+//    }
+    
+    static func weaponsList(data: Data) -> Array<Dictionary<String, String>>? {
+        let json = try! JSONSerialization.jsonObject(with: data,
                                                      options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
         
         guard let weapons = json.value(forKey: ConstText.weapons) as! Array<Dictionary<String, String>>? else {
@@ -44,6 +56,7 @@ class JsonManager {
         // 武器配列を返す
         return weapons
     }
+
     
     // 武器個数を返す、パースに失敗している場合は0を返す
     static func CountAllWeapons() -> Int {

@@ -11,6 +11,8 @@ import Social
 import Photos
 import SlideMenuControllerSwift
 import GoogleMobileAds
+import GoogleAPIClientForREST
+import GoogleSignIn
 
 class HomeViewController: UIViewController {
 
@@ -32,6 +34,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var loseCount: UILabel!
     /// バナー表示ビュー
     @IBOutlet weak var bannerView: UIView!
+    
+    // If modifying these scopes, delete your previously saved credentials by
+    // resetting the iOS simulator or uninstall the app.
+    let scopes = [kGTLRAuthScopeDriveReadonly]
+    
+    let service = GTLRDriveService()
+    let signInButton = GIDSignInButton()
     
     override func viewDidLoad() {
         // NavigationBarのタイトル
@@ -72,6 +81,14 @@ class HomeViewController: UIViewController {
         
         banner.load(gadRequest)
         self.bannerView.addSubview(banner)
+        
+        // Configure Google Sign-in.
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        // APIキーの設定かな
+        GIDSignIn.sharedInstance().clientID = "AIzaSyDW9NZ1-nlHY06ir9wdS8OKS9Pf7ab-3jg"
+        GIDSignIn.sharedInstance().scopes = scopes
+        GIDSignIn.sharedInstance().signInSilently()
 
         // キャプチャボタンをNavigationBarの右に追加
         let rightCaptureButton = UIButton()
@@ -108,7 +125,7 @@ class HomeViewController: UIViewController {
         // 勝敗ラベルを更新
         winLoseCountLoad()
         // 武器マスタの初期化
-        DataSource.masterWeaponList = JsonManager.weaponsList()
+//        DataSource.masterWeaponList = JsonManager.weaponsList()
     }
 
     override func didReceiveMemoryWarning() {
@@ -250,5 +267,36 @@ extension HomeViewController: UITableViewDelegate {
 }
 
 extension HomeViewController: GADBannerViewDelegate {
+    
+}
+
+// Google Drive Delgate
+extension HomeViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            
+        } else {
+            // ログイン成功してたら
+            let query = GTLRDriveQuery_FilesList.query()
+            query.q = "json"
+            query.spaces = "drive"
+        }
+        
+        let query = GTLRDriveQuery_FilesGet.query(withFileId: "0B4YL-ML79J52enVOaXB1ZHEyV1U")
+        service.executeQuery(query, completionHandler: { (tic, file, error) in
+            if error == nil {
+                if let d = file as? Data {
+                    JsonManager.weaponsList(data: d)
+                }
+            } else {
+                
+            }
+        })
+//        let query = GTLRDriveQuery_FilesGet.queryForMedia(withFileId: "0B4YL-ML79J52enVOaXB1ZHEyV1U")
+        
+        print(query)
+        
+    }
     
 }

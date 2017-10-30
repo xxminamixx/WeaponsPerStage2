@@ -118,7 +118,7 @@ extension WeaponsSelectionViewController: SlideMenuControllerDelegate {
     
     func rightDidOpen() {
         // 武器マスタの初期化
-        DataSource.masterWeaponList = JsonManager.weaponsList()	
+//        DataSource.masterWeaponList = JsonManager.weaponsList()	
     }
     
     func rightDidClose() {
